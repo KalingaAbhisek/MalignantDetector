@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Malignant Detector</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Breast Cancer Predictor</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+        <label for="sm">Smoothness Mean:</label>
+    	<input type="text" name="Smoothness Mean" placeholder="Smoothness_Mean" id="sm" required="required" />
+        <br>
+        <label for="fdm">Fractal Dimension Mean:</label>
+        <input type="text" name="Fractal Dimension Mean" placeholder="fractal_dimension_mean" id="fdm" required="required" />
+        <br>
+        <label for="ase">Area se:</label>
+		<input type="text" name="Area se" placeholder="area_se" id="ase" required="required" />
+        <br>
+        <label for="cse">Compactness se:</label>
+		<input type="text" name="Compactness se" placeholder="compactness_se" id="cse" required="required" />
+        <br>
+        <label for="cp">Concave Points se</label>
+        <input type="text" name="Concave points se" placeholder="concave_points_se" id="cp" required="required" />
+        <br>
+        <label for="fds">Fractal Dimension se:</label>
+        <input type="text" name="Fractal Dimension se" placeholder="fractal_dimension_se" id="fds" required="required" />
+        <br>
+        <label for="ase">Area worst:</label>
+        <input type="text" name="Area worst" placeholder="area_worst" id="ase" required="required" />
+        <br>
+        <label for="cw">Concativity Worst:</label>
+        <input type="text" name="Concativity Worst" id="cw" placeholder="concativity_worst" required="required" />
+        <br>
+        <label for="sw">Symmetry Worst:</label>
+        <input type="text" name="Symmetry Worst" placeholder="symmetry_worst" id="sw" required="required" />
+        <br>
+        <label for="symm">Symmetry Mean:</label>
+        <input type="text" name="Symmetry Mean" placeholder="symmetry_mean" id="symm" required="required" />
+        <br>
+        <label for="tse">Texture se:</label>
+        <input type="text" name="Texture se" placeholder="texture_se" id="tse" required="required" />
+        <br>
+        <label for="sse">Smoothness se:</label>
+        <input type="text" name="Smoothness se" placeholder="smoothness_se" id="sse" required="required" />
+        <br>
+        <label for="csse">Concativity se:</label>
+        <input type="text" name="Concativity se" placeholder="concativity_se" id="csse" required="required" />
+        <br>
+        <label for="symmse">Symmetry se:</label>
+        <input type="text" name="Symmetry se" placeholder="symmetry_se" id="symmse" required="required" />
+        <br>
+        <label for="tw">Texture Worst:</label>
+        <input type="text" name="Texture Worst" placeholder="texture_worst" id="tw" required="required" />
+        <br>
+        <label for="sw">Smoothness Worst:</label>
+        <input type="text" name="Smoothness Worst" placeholder="smoothness_worst" id="sw" required="required" />
+        <br>
+        <label for="cpw">Concave Points Worst:</label>
+        <input type="text" name="Concave Points Worst" placeholder="concave_points_worst" i="cpw" required="required" />
+        <br>
+        <label for="fdw">Fractal Dimension Worst:</label>
+        <input type="text" name="Fractal Dimension Worst" placeholder="fractal_dimension_worst" id="fdw" required="required" />
+        <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{prediction_text}}
+
+ </div>
+
+
+</body>
+</html>
